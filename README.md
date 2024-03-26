@@ -1,4 +1,3 @@
-# jupyter-notebook
 Laporan Proyek Regression On Medical Cost
 
 Domain Proyek
