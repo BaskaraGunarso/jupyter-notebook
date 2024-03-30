@@ -66,21 +66,25 @@ Berdasarkan gambar 1b Analisis Univariat(Data Kategori) dengan melihat grafik te
 - Koordinat pada children ini merupakan koordinat yang sangat tinggi hongga mencapai  550 di matriks 0, 0.38 tetapi dari koordinat ini mengalami penurunan lagi di matriks 0.38, 0.76 sampai di matriks 2.66, 3.04 tetap mengalami penurunan sehingga menyentuh 0
 - Koordinat Charges  memiliki koordinat yang mencapai 350 dengan matriks 1121.8739.. pada saat matriks inilah mengalami peningkatan yang sangat drastic cuman di koordniat ini juga mengalami penurunan yang tidak stabil di matriks lainnya
 
+![Screenshot 2024-03-31 020558](https://github.com/BaskaraGunarso/jupyter-notebook/assets/162326053/f9b43c63-757b-446c-87d2-35244d60e20d) ![Screenshot 2024-03-31 020850](https://github.com/BaskaraGunarso/jupyter-notebook/assets/162326053/bc5bf6f5-9fa1-47fc-9e61-5db5d167cfda)
+
+
+Gambar 2a. Analisis Multivariat (Data Kategori)
 
 ![Screenshot 2024-03-25 203125](https://github.com/BaskaraGunarso/jupyter-notebook/assets/162326053/340108db-634b-43bf-92ec-8db2ba344e99)
 
-Gambar 2a. Analisis Multivariat (Data Numerik)
+Gambar 2b. Analisis Multivariat (Data Numerik)
 
 ![Screenshot 2024-03-26 114713](https://github.com/BaskaraGunarso/jupyter-notebook/assets/162326053/c002d1f3-43ca-437b-9f65-af581550ebbb)
 
-Gambar 2b. Analisis Multivariat (Correlation Matrix)
+Gambar 2c. Analisis Multivariat (Correlation Matrix)
 
-Pada Gambar 2a tampak persebaran data ‘Scatter plot age,bmi dan children’.dengan mengamati rata rata ketiga ini terhadap fitur kategori diatas,diperoleh insight sebagai berikut:
+Pada Gambar 2b tampak persebaran data ‘Scatter plot age,bmi dan children’.dengan mengamati rata rata ketiga ini terhadap fitur kategori diatas,diperoleh insight sebagai berikut:
 - Pada fitur’Age’,rata rata cenderung bervariasi yang dimana memiliki rentang dari 0 hingga 60.000 tetapi pada rentang ini memiliki jumlah yang sangat tinggi daripada plot yang lainnya.
 - Nilai bmi dan children merupakan plotan yang beda tipis jaraknya dan pada plotan kedua ini merupakan salah satu yang rendah dibandingan di age
 - Kesimpulan akhir,fitur kategori ahwa kedua variabel dengan menampilkan titik pada data bidang kartesian maka hubungan antara usia dan variabel lainnya dapat,pola umumnya dari sebaran titik data,kita dapat melakukan outlier dan korelasi dengan adanya grafik diatas.
 
-Pada Gambar 2b. dengan menggunakan fungsi pairplot dari library seaborn,tampak terlihat bahwa relasi pasangan dalam dataset.pada pila sebaran data grafik paiplot,terlihat bahwa children memiliki korelasi dengan fitur terseut,sedangkan kedua fitur lainnya memperlihat korelasi yang rendah karena adanya penyebaran tidak membentuk pola
+Pada Gambar 2c. dengan menggunakan fungsi pairplot dari library seaborn,tampak terlihat bahwa relasi pasangan dalam dataset.pada pila sebaran data grafik paiplot,terlihat bahwa children memiliki korelasi dengan fitur terseut,sedangkan kedua fitur lainnya memperlihat korelasi yang rendah karena adanya penyebaran tidak membentuk pola
 
 ## Data Preparation
 Pada proses Data Preparation dilakukan kegiatan seperti Data Gathering, Data Assessing, dan Data Cleaning. Pada proses Data Gathering, data diimpor sedemikian rupa agar bisa dibaca dengan baik menggunakan dataframe Pandas. Untuk proses Data Assessing, berikut adalah beberapa pengecekan yang dilakukan:
@@ -89,10 +93,34 @@ Pada proses Data Preparation dilakukan kegiatan seperti Data Gathering, Data Ass
 - Missing value (data atau informasi yang "hilang" atau tidak tersedia)
 - Outlier (data yang menyimpang dari rata-rata sekumpulan data yang ada)
 
-Pada proses Data Cleaning, secara garis besar, terdapat tiga metode yang dapat digunakan antara lain seperti berikut:
+Pada kasus proyek ini tidak ditemukan data duplikat. Pada proyek ini tidak ditemukan Missing Value
 
-Dropping (metode yang dilakukan dengan cara menghapus sejumlah baris data)
-Imputation (metode yang dilakukan dengan cara mengganti nilai yang "hilang" atau tidak tersedia dengan nilai tertentu yang bisa berupa median atau mean dari data)
-Interpolation (metode menghasilkan titik-titik data baru dalam suatu jangkauan dari suatu data)
+    print("Total missing values:", data.isna().sum().sum())
+
+  Total missing values: 0
 
 ## Modeling
+Seperti yang dijelaskan di awal, model yang dipilih adalah model regresi karena merupakan salah satu algoritma yang paling umum digunakan dalam pembuatan model prediksi. Dalam bentuk yang sederhana, regresi terdiri dari intersep dan slope yang dituliskan dalam rumusan berikut
+
+  #### y = a + bX
+
+dimana:
+
+- y adalah variabel kriterium (variabel terikat yang digunakan untuk memprediksi)
+- a adalah intersep (variabel konstan yang memiliki arti sebagai titik perpotongan suatu garis dengan sumbu Y),
+- b adalah slope (nilai koefisien yang menyatakan ukuran kemiringan suatu garis), dan
+- X adalah variabel prediktor (variabel yang digunakan untuk memprediksi atau menjelaskan variabel lain dalam suatu model)
+
+Secara umum, regresi ini itu sendiri digunakan untuk meramalkan pengaruh variabel prediktor terhadap variabel kriterium atau membuktikan ada atau tidaknya hubungan fungsional antara variabel bebas (X) dengan variabel terikat (y).
+
+Namun begitu terdapat kelebihan dan kekurangan dari model regresi, yaitu:
+
+Kelebihan regresi:
+
+- Kemudahan untuk digunakan
+- Kekuatan Prediktor dalam mengidentifikasi sekuat apa pengaruh yang diberikan oleh variabel prediktor (variabel independen) terhadap variabel lainnya (variabel dependen).
+- Dapat memprediksi nilai/tren di masa yang mendatang
+
+Kelemahan dari model regresi adalah karena hasil ramalan dari analisis regresi merupakan nilai estimasi sehingga kemungkinan untuk tidak sesuai dengan data aktual tetaplah ada.
+
+## Evaluation
