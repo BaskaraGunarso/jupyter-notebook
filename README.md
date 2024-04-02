@@ -102,7 +102,7 @@ Pada kasus proyek ini tidak ditemukan data duplikat. Pada proyek ini tidak ditem
 ## Modeling
 Seperti yang dijelaskan di awal, model yang dipilih adalah model regresi karena merupakan salah satu algoritma yang paling umum digunakan dalam pembuatan model prediksi. Dalam bentuk yang sederhana, regresi terdiri dari intersep dan slope yang dituliskan dalam rumusan berikut
 
-  #### y = a + bX
+  #### Y = mX + c
 
 dimana:
 
@@ -124,3 +124,4 @@ Kelebihan regresi:
 Kelemahan dari model regresi adalah karena hasil ramalan dari analisis regresi merupakan nilai estimasi sehingga kemungkinan untuk tidak sesuai dengan data aktual tetaplah ada.
 
 ## Evaluation
+
