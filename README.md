@@ -124,4 +124,13 @@ Kelebihan regresi:
 Kelemahan dari model regresi adalah karena hasil ramalan dari analisis regresi merupakan nilai estimasi sehingga kemungkinan untuk tidak sesuai dengan data aktual tetaplah ada.
 
 ## Evaluation
+![Screenshot 2024-04-02 112953](https://github.com/BaskaraGunarso/jupyter-notebook/assets/162326053/9a28e273-c8a0-4618-8faf-d1f4a5a87cc2)
+
+
+## Referensi
+- [1] 	D. D. M. B. P. R. M. M. S. P. P. Mukund Kulkarni, "Medical Insurance Cost Prediction using Machine Learning," Ijraset Journal For Research in Applied Science and Engineering Technology, 2022. 
+- [2] 	A. Tike, "A MEDICAL PRICE PREDICTION SYSTEM," Master's Project, 2018. 
+- [3] 	T. W. B. H. Y. L. L. T. Lin Sun, "Explainable and Personalized Medical Cost Prediction Based on Multitask Learning over Mobile Devices," 2022. 
+- [4] 	R. M. A. E.-A. H. M. A. A.-A. H. E.-B. Ahmed I. Taloba, "Estimation and Prediction of Hospitalization and Medical Care Costs Using Regression in Machine Learning," J Healthc Eng., 2022. 
+- [5] 	U. O. a. E. Ukwandu, "Machine Learning For An Explainable Cost Prediction of Medical Insurance," Department of Computer Science, pp. 19-20, 2022. 
 
