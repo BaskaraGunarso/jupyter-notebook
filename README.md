@@ -8,7 +8,7 @@ Dengan adanya metode regresi dalam proyek ini akan mencoba mengidentifikasi hubu
 
 ## Problem Statement
 - Melakukan deskriptif statistik pada data (melihat rata-rata, median, dan nilai lainnya)
-- Berdasarkan eksplorasi dataset, fitur apa saja yang mempengaruhi dalam
+- Berdasarkan eksplorasi dataset, fitur apa saja yang mempengaruhi dalam menentukan biaya medis seseorang
 - Berdasarkan pengecekkan apakah terdapat Missing data,duplicate data,dan eror data?
 - Bagaimana cara Memvisualisasikan data untuk melihat pola data
 
