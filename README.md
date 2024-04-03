@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Prediksi Biaya Asuransi
+# Laporan Proyek Machine Learning - Prediksi Biaya Asuransi Kesehatan
 
 ## Domain Proyek
 Regresision on Medical cost” mengacu pada penggunaan teknik regresi untuk menganalisis dan memprediksi biaya medis seseorang bersarkan berbagai factor yang relevan.Dalam Proyek ini,peneliti akan mengumpulkan data biaya medis dari sejumlah pasien serat infomasi tambahan tentang karaktersitik individu tersebut,seperti usia,jenis kelamin dan indek massa benda dan juga kebiasaan uang lainnya .
@@ -14,7 +14,7 @@ Dengan adanya metode regresi dalam proyek ini akan mencoba mengidentifikasi hubu
 
 ## Goals
 - Mengeksplorasi semua fitur yang tersedia pada dataset kemudian membuat melihat korelasi harga dari semua fitur yang sedia untuk melihat faktor apa saja yang paling berpengaruh sampai paling kurang berpengaruh
-
+- Melakukan proses data wragling dan data preparation terhadap dataset agar dapat dibuat model predksi biaya asuransi
 
 ## Solution Statement
 - untuk melakukan deskriptif statistic pada data kita dapat melakukan dua cara dengan melakukan secara manual yaitu melihat rata rata pada data,median pada data dan mencari nilai yang lainnya pada data,sedangkan cara praktis kita bisa melakukan di excel dengan cara kita memblok semua data yang tercantum kemudian kita bisa mencari rata rata dari average dan sebagainya
@@ -102,14 +102,15 @@ Pada kasus proyek ini tidak ditemukan data duplikat. Pada proyek ini tidak ditem
 ## Modeling
 Seperti yang dijelaskan di awal, model yang dipilih adalah model regresi karena merupakan salah satu algoritma yang paling umum digunakan dalam pembuatan model prediksi. Dalam bentuk yang sederhana, regresi terdiri dari intersep dan slope yang dituliskan dalam rumusan berikut
 
-  #### Y = mX + c
+    Y = mX + c
 
 dimana:
 
 - y adalah variabel kriterium (variabel terikat yang digunakan untuk memprediksi)
-- a adalah intersep (variabel konstan yang memiliki arti sebagai titik perpotongan suatu garis dengan sumbu Y),
-- b adalah slope (nilai koefisien yang menyatakan ukuran kemiringan suatu garis), dan
+- m adalah slope (nilai koefisien yang menyatakan ukuran kemiringan suatu garis)
 - X adalah variabel prediktor (variabel yang digunakan untuk memprediksi atau menjelaskan variabel lain dalam suatu model)
+- c adalah intersep (variabel konstan yang memiliki arti sebagai titik perpotongan suatu garis dengan sumbu Y),
+
 
 Secara umum, regresi ini itu sendiri digunakan untuk meramalkan pengaruh variabel prediktor terhadap variabel kriterium atau membuktikan ada atau tidaknya hubungan fungsional antara variabel bebas (X) dengan variabel terikat (y).
 
@@ -124,8 +125,14 @@ Kelebihan regresi:
 Kelemahan dari model regresi adalah karena hasil ramalan dari analisis regresi merupakan nilai estimasi sehingga kemungkinan untuk tidak sesuai dengan data aktual tetaplah ada.
 
 ## Evaluation
-![Screenshot 2024-04-02 112953](https://github.com/BaskaraGunarso/jupyter-notebook/assets/162326053/9a28e273-c8a0-4618-8faf-d1f4a5a87cc2)
+- ![Screenshot_2024-04-02_112953-removebg-preview](https://github.com/BaskaraGunarso/jupyter-notebook/assets/162326053/c21f457d-e67c-41b0-8d7a-774fb2b69ff8)
+- ![Screenshot_2024-04-02_100533-removebg-preview](https://github.com/BaskaraGunarso/jupyter-notebook/assets/162326053/fda1220d-0315-4f46-87be-260f9152e864)
 
+Berikut merupakan penjelasan kegunaan dari masing-masing metrik yang digunakan:
+
+- MAE menghitung rata-rata dari selisih absolut antara nilai prediksi dan nilai aktual. Semakin kecil nilai MAE, semakin baik kualitas model tersebut.
+- MSE menghitung rata-rata dari selisih kuadrat antara nilai prediksi dan nilai aktual. Semakin kecil nilai MSE, semakin baik kualitas model tersebut.
+- R2 digunakan untuk menilai seberapa besar pengaruh variabel independen tertentu terhadap variabel dependen
 
 ## Referensi
 - [1] 	D. D. M. B. P. R. M. M. S. P. P. Mukund Kulkarni, "Medical Insurance Cost Prediction using Machine Learning," Ijraset Journal For Research in Applied Science and Engineering Technology, 2022. 
