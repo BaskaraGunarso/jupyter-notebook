@@ -102,15 +102,13 @@ Pada kasus proyek ini tidak ditemukan data duplikat. Pada proyek ini tidak ditem
 ## Modeling
 Seperti yang dijelaskan di awal, model yang dipilih adalah model regresi karena merupakan salah satu algoritma yang paling umum digunakan dalam pembuatan model prediksi. Dalam bentuk yang sederhana, regresi terdiri dari intersep dan slope yang dituliskan dalam rumusan berikut
 
-    Y = mX + c
-
+    Y = a + bX
 dimana:
 
 - y adalah variabel kriterium (variabel terikat yang digunakan untuk memprediksi)
-- m adalah slope (nilai koefisien yang menyatakan ukuran kemiringan suatu garis)
+- a adalah intersep (variabel konstan yang memiliki arti sebagai titik perpotongan suatu garis dengan sumbu Y),
+- b adalah slope (nilai koefisien yang menyatakan ukuran kemiringan suatu garis), dan
 - X adalah variabel prediktor (variabel yang digunakan untuk memprediksi atau menjelaskan variabel lain dalam suatu model)
-- c adalah intersep (variabel konstan yang memiliki arti sebagai titik perpotongan suatu garis dengan sumbu Y),
-
 
 Secara umum, regresi ini itu sendiri digunakan untuk meramalkan pengaruh variabel prediktor terhadap variabel kriterium atau membuktikan ada atau tidaknya hubungan fungsional antara variabel bebas (X) dengan variabel terikat (y).
 
@@ -134,6 +132,22 @@ Berikut merupakan penjelasan kegunaan dari masing-masing metrik yang digunakan:
 - MSE menghitung rata-rata dari selisih kuadrat antara nilai prediksi dan nilai aktual. Semakin kecil nilai MSE, semakin baik kualitas model tersebut.
 - R2 digunakan untuk menilai seberapa besar pengaruh variabel independen tertentu terhadap variabel dependen
 
+       # prediction on training data
+      training_data_prediction =regressor.predict(X_train)
+
+      # R squared value
+      r2_train = metrics.r2_score(Y_train, training_data_prediction)
+      print('R squared vale : ', r2_train)
+    R squared vale :  0.751505643411174
+
+      # prediction on test data
+      test_data_prediction =regressor.predict(X_test)
+
+      # R squared value
+      r2_test = metrics.r2_score(Y_test, test_data_prediction)
+      print('R squared vale : ', r2_test)
+  R squared vale :  0.7447273869684077
+  
 ## Referensi
 - [1] 	D. D. M. B. P. R. M. M. S. P. P. Mukund Kulkarni, "Medical Insurance Cost Prediction using Machine Learning," Ijraset Journal For Research in Applied Science and Engineering Technology, 2022. 
 - [2] 	A. Tike, "A MEDICAL PRICE PREDICTION SYSTEM," Master's Project, 2018. 
